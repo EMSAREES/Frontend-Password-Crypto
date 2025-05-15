@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import useEncryptFormLogic from '../hooks/useEncryptFormLogic';
 
 export default function PasswordEncriptForm() {
