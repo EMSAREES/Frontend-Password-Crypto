@@ -9,7 +9,9 @@ export default function PasswordEncriptForm() {
     handleDecrypt,
     buttonCopy,
     buttonClear,
+    loading,
   } = useEncryptFormLogic();
+  
   
   return(
     <div className="bg-gray-100 min-h-screen flex items-center justify-center py-8">
@@ -55,15 +57,27 @@ export default function PasswordEncriptForm() {
 
             {/* Botones */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-lg transition-colors duration-300 flex-1"
-              onClick={handleEncrypt}
+              <button
+                className={`bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-lg transition-colors duration-300 flex-1 flex items-center justify-center ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                onClick={handleEncrypt}
+                disabled={loading}
               >
-                Encriptar
+                {loading ? (
+                  <div className="loader w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                ) : (
+                  "Encriptar"
+                )}
               </button>
-              <button className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-lg transition-colors duration-300 flex-1"
-              onClick={handleDecrypt}
+              <button
+                className={`bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-lg transition-colors duration-300 flex-1 flex items-center justify-center ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                onClick={handleDecrypt}
+                disabled={loading}
               >
-                Desencriptar
+                {loading ? (
+                  <div className="loader w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                ) : (
+                  "Desencriptar"
+                )}
               </button>
             </div>
           </div>

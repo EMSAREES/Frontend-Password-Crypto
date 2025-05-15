@@ -4,6 +4,8 @@ import  useCryptoAPI from '../services/cryptoAPI';
 
 export default function useEncryptFormLogic() {
     
+    const [loading, setLoading] = useState(false);
+
     const { encryptText, decryptText } = useCryptoAPI();
 
     const [form, setForm] = useState({
@@ -24,6 +26,9 @@ export default function useEncryptFormLogic() {
             return;
         }
 
+        
+        setLoading(true); // ← activa carga
+
         try {
         const response = await encryptText({
             texto: form.texto,
@@ -40,6 +45,8 @@ export default function useEncryptFormLogic() {
         }));
         }
 
+        setLoading(false); // ← desactiva carga
+
     };
 
     const handleDecrypt = async () => {
@@ -47,6 +54,9 @@ export default function useEncryptFormLogic() {
             alert("Por favor completa los campos de texto y clave.");
             return;
         }
+
+        setLoading(true); // ← activa carga
+
         try {
         const response = await decryptText({
             texto: form.texto,
@@ -66,6 +76,8 @@ export default function useEncryptFormLogic() {
             resultado: 'Error al decicriptar el texto.',
         }));
         }
+
+        setLoading(false); // ← desactiva carga
 
     };
 
@@ -93,5 +105,6 @@ export default function useEncryptFormLogic() {
         handleDecrypt,
         buttonCopy,
         buttonClear,
+        loading,
     };
 }
