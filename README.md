@@ -1,4 +1,58 @@
-URL: https://keycrypte-descripte.netlify.app/
+🔐 Frontend Password Crypto
+
+Frontend Password Crypto es una aplicación web desarrollada con React que permite cifrar y descifrar contraseñas de manera segura directamente desde tu navegador. Es ideal para practicar criptografía básica y proteger información sensible de forma rápida y sencilla.
+
+💻 Prueba la app en vivo: https://keycrypte-descripte.netlify.app/
+
+✨ Características principales
+
+🔒 Cifrado de contraseñas: Protege tus contraseñas ingresándolas en la app.
+
+🔑 Descifrado seguro: Recupera la contraseña original usando la clave correcta.
+
+🖥 Interfaz intuitiva: Fácil de usar, moderna y responsive.
+
+⚡ Rápido y sin instalación: Funciona directamente en el navegador.
+
+🛠 Tecnologías utilizadas
+
+Lenguaje: JavaScript
+
+Framework: React (Create React App)
+
+Estilos: CSS
+
+🚀 Cómo ejecutar localmente
+
+Clona el repositorio:
+
+git clone https://github.com/EMSAREES/Frontend-Password-Crypto.git
+
+
+Instala dependencias:
+
+cd Frontend-Password-Crypto
+npm install
+
+
+Ejecuta la app en modo desarrollo:
+
+npm start
+
+
+Abre en el navegador:
+
+http://localhost:3000
+
+💡 Notas
+
+La app fue creada con Create React App, lo que permite un desarrollo rápido y estructurado.
+
+Puedes construir la versión de producción con:
+
+npm run build
+
+----------------------------------------------------------------------------------------------------
 
 # Getting Started with Create React App
 
@@ -70,4 +124,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Frontend-Password-Crypto
